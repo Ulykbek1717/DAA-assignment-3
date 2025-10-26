@@ -47,12 +47,10 @@ A list of edges (possible roads), where each edge has attributes from, to, and w
 
 
 5. Results and Observations
-5.1 Numerical Results
+
 <img width="455" height="563" alt="image" src="https://github.com/user-attachments/assets/1f730fec-af9f-411a-a0e7-f2d4db405099" />
 
 
-5.2 Visual Analysis
-Analysis:
 
 
 6. Analytical Discussion
