@@ -17,6 +17,7 @@ Produces a JSON output file summarizing the MST edges, total cost, and algorithm
 The ultimate objective is to determine the optimal algorithm for various types of transportation networks and understand trade-offs between computation time and implementation complexity.
 
 3. Implementation and Methodology
+
 3.1 Tools and Technologies
 
 
@@ -58,16 +59,16 @@ Analysis:
 6.1 Performance Interpretation
 
 Time Efficiency:
-Kruskal is slightly faster in Graph 1 due to fewer heap operations. However, Prim’s advantage grows in denser graphs.
+Prim’s algorithm generally performed faster than Kruskal’s on small and dense graphs, while Kruskal’s showed similar or slightly better results on sparse ones. For all tested graphs, both algorithms produced identical MST costs. Execution times ranged from 0.07 ms to 1.8 ms, showing stable and efficient performance.
 
 Operation Complexity:
-Prim’s algorithm depends heavily on the number of adjacent vertices; Kruskal depends primarily on the number of edges.
+Prim’s algorithm runs in O(E log V), while Kruskal’s operates in O(E log E) due to edge sorting and union–find. The recorded operation counts (20–380) matched theoretical expectations.
 
 Scalability:
-For very large and sparse graphs, Kruskal is preferred. For dense graphs where adjacency lists are easy to maintain, Prim’s algorithm is more efficient.
+Both algorithms scaled well up to large graphs (30+ vertices). Prim handled dense graphs slightly better, while Kruskal was more efficient for sparse networks. Performance remained consistent with minimal time growth.
 
 Implementation Complexity:
-Kruskal’s implementation requires additional data structure (Union-Find), while Prim’s algorithm is simpler to implement when adjacency lists are available.
+Prim’s algorithm is easier to implement using adjacency structures, while Kruskal’s requires extra data structures (Disjoint Set). However, both were implemented correctly and produced equivalent MST outputs.
 
 
 Conclusion:
